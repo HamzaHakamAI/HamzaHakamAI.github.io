@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#070914">
+<meta name="description" content="Hamza Hakam — Artificial Intelligence student, aspiring developer, and lifelong learner.">
+<title>Hamza Hakam — AI Student & Developer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070914;--surface:#101426;--surface2:#151b32;--ink:#f5f7ff;--muted:#a0aac2;--line:rgba(174,190,240,.15);--cyan:#79f0ef;--blue:#7c9cff;--purple:#c49aff;--pink:#ff9bd5;--max:1160px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--bg);color:var(--ink);font-family:"DM Sans",sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+#ambient{position:fixed;inset:0;z-index:-3;width:100%;height:100%;pointer-events:none}body:before{content:"";position:fixed;inset:-20%;z-index:-2;pointer-events:none;background:radial-gradient(ellipse at 15% 20%,rgba(81,104,255,.18),transparent 34%),radial-gradient(ellipse at 82% 30%,rgba(185,100,255,.14),transparent 30%),radial-gradient(ellipse at 52% 90%,rgba(66,225,218,.10),transparent 34%);animation:ambientShift 18s ease-in-out infinite alternate}body:after{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;opacity:.13;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:58px 58px;mask-image:linear-gradient(to bottom,black,transparent 90%)}
+.wrap{width:min(var(--max),calc(100% - 44px));margin:auto}.progress-track{position:fixed;top:0;left:0;width:100%;height:3px;background:#ffffff12;z-index:2000}.progress{height:100%;width:0;background:linear-gradient(90deg,var(--cyan),var(--blue),var(--purple),var(--pink));box-shadow:0 0 18px var(--blue)}
+header{position:fixed;z-index:1000;top:3px;left:0;width:100%;transition:.35s;border-bottom:1px solid transparent}header.scrolled{background:rgba(7,9,20,.78);backdrop-filter:blur(22px);border-color:var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font:700 21px "Space Grotesk";letter-spacing:-1px}.brand em{font-style:normal;color:var(--cyan)}.navlinks{display:flex;align-items:center;gap:27px;color:#c5cce0;font-size:12px}.navlinks a{position:relative;padding:10px 0;transition:.25s}.navlinks a:after{content:"";position:absolute;bottom:3px;left:0;width:0;height:1px;background:var(--cyan);transition:.3s}.navlinks a:hover,.navlinks a.active{color:var(--cyan)}.navlinks a:hover:after,.navlinks a.active:after{width:100%}
+.pill,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;border:1px solid rgba(121,240,239,.32);border-radius:999px;padding:12px 18px;background:linear-gradient(120deg,rgba(121,240,239,.13),rgba(124,156,255,.12));color:var(--ink);font-size:12px;font-weight:700;transition:transform .3s,border-color .3s,box-shadow .3s;box-shadow:inset 0 1px #ffffff12;cursor:pointer}.pill:hover,.btn:hover{transform:translateY(-4px);border-color:var(--cyan);box-shadow:0 14px 38px #5b8dff30}.btn .arrow{transition:transform .25s}.btn:hover .arrow{transform:translate(3px,-3px)}.btn.ghost{background:#ffffff08;border-color:var(--line);color:#dce4f7}.menu{display:none;background:#ffffff08;color:white;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:20px;cursor:pointer}
+section{padding:112px 0;position:relative}.hero{min-height:100svh;display:flex;align-items:center;padding:132px 0 80px;isolation:isolate}.hero-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:55px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;padding:9px 14px;border:1px solid var(--line);border-radius:99px;background:#ffffff08;color:#d8e1f6;font-size:11px;letter-spacing:.8px}.live-dot{width:7px;height:7px;background:#7bf0b8;border-radius:50%;box-shadow:0 0 0 0 #7bf0b855;animation:pulse 1.8s infinite}
+h1,h2,h3,p{margin-top:0}h1{font:700 clamp(52px,7vw,88px)/.99 "Space Grotesk";letter-spacing:-5px;margin:25px 0 20px}.gradient{background:linear-gradient(100deg,#f7ffff 0%,var(--cyan) 30%,#a5b7ff 65%,#e2a9ff 100%);background-size:200% auto;color:transparent;background-clip:text;-webkit-background-clip:text;animation:gradientFlow 7s linear infinite}.hero-copy{max-width:590px;color:var(--muted);font-size:16px;line-height:1.9}.typed-line{min-height:28px;color:var(--cyan);font:600 15px "Space Grotesk";letter-spacing:.3px;margin:15px 0 4px}.caret{display:inline-block;width:2px;height:17px;background:var(--cyan);vertical-align:-3px;margin-left:3px;animation:blink .8s steps(2) infinite}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:28px 0 26px}.quick-facts{display:flex;gap:22px;flex-wrap:wrap;color:#aab5ce;font-size:11px}.quick-facts b{color:#f0f4ff;font-weight:600}.quick-facts span{display:flex;align-items:center;gap:8px}
+.hero-art{height:540px;position:relative;display:grid;place-items:center;perspective:900px}.halo{position:absolute;width:min(440px,90%);aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,rgba(100,133,255,.18),rgba(150,90,255,.06) 48%,transparent 70%);filter:blur(2px);animation:haloPulse 5s ease-in-out infinite}.ring{position:absolute;width:410px;height:410px;max-width:90%;border:1px solid #9bb4ff35;border-radius:50%;transform:rotateX(68deg) rotateZ(-24deg);animation:ringSpin 22s linear infinite}.ring.r2{width:345px;height:345px;border-color:#79f0ef45;transform:rotateX(68deg) rotateZ(35deg);animation-duration:17s;animation-direction:reverse}.ring.r3{width:475px;height:475px;border-style:dashed;border-color:#c49aff30;transform:rotateX(72deg) rotateZ(70deg);animation-duration:34s}.profile-shell{width:238px;height:238px;border-radius:50%;padding:7px;position:relative;background:conic-gradient(from 0deg,var(--cyan),var(--blue),var(--purple),var(--pink),var(--cyan));box-shadow:0 0 70px #789aff38,0 0 130px #b17aff20;animation:profileFloat 5s ease-in-out infinite}.profile-inner{width:100%;height:100%;border-radius:50%;padding:6px;background:#0b1020;position:relative}.profile-inner img{width:100%;height:100%;border-radius:50%;object-fit:cover;background:linear-gradient(135deg,#1b2d52,#11162a);display:block}.profile-fallback{position:absolute;inset:6px;border-radius:50%;display:grid;place-items:center;font:700 58px "Space Grotesk";color:#d8fbff;background:linear-gradient(145deg,#1b2d52,#101629);z-index:-1}
+.float-chip{position:absolute;padding:12px 15px;border:1px solid #b6c9ff26;border-radius:15px;background:rgba(13,19,38,.78);backdrop-filter:blur(16px);box-shadow:0 16px 42px #0005;font-size:11px;color:#e7edff;animation:chipFloat 5s ease-in-out infinite}.float-chip b{display:block;color:var(--cyan);font:700 10px "Space Grotesk";letter-spacing:1px;margin-bottom:4px}.chip-a{top:12%;left:0}.chip-b{right:-1%;top:31%;animation-delay:-1.6s}.chip-c{bottom:12%;left:7%;animation-delay:-3s}.orbit-dot{position:absolute;width:13px;height:13px;border-radius:50%;background:var(--cyan);box-shadow:0 0 22px var(--cyan);top:17%;right:19%}
+.section-head{max-width:710px;margin-bottom:45px}.kicker{font:700 10px "Space Grotesk";letter-spacing:2.5px;color:var(--cyan);margin-bottom:15px}.section-head h2{font:700 clamp(36px,4.7vw,56px)/1.05 "Space Grotesk";letter-spacing:-2.7px;margin-bottom:16px}.section-head p{color:var(--muted);line-height:1.85;font-size:14px;max-width:640px}
+.glass{position:relative;overflow:hidden;border:1px solid var(--line);border-radius:22px;background:linear-gradient(145deg,rgba(23,32,58,.8),rgba(12,17,33,.83));box-shadow:0 22px 65px #0003;isolation:isolate}.glass:before{content:"";position:absolute;inset:-1px;z-index:-1;opacity:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),#7ce9ff18,transparent 45%);transition:opacity .35s}.glass:hover:before{opacity:1}.about-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:18px}.about-card{padding:30px}.about-card h3{font:600 22px "Space Grotesk";margin-bottom:15px}.about-card p{font-size:13px;color:var(--muted);line-height:1.9}.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.fact{padding:14px;border-radius:13px;background:#ffffff05;border:1px solid var(--line)}.fact small{display:block;font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#8f9bb8;margin-bottom:7px}.fact strong{font-size:12px;line-height:1.5}
+.skill-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.skill{padding:22px;min-height:174px;transition:transform .35s,border-color .35s,box-shadow .35s}.skill:hover,.project:hover{transform:translateY(-8px) scale(1.015);border-color:#79f0ef66;box-shadow:0 20px 50px #0005}.skill-icon{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#79f0ef24,#c49aff24);color:var(--cyan);font:700 14px "Space Grotesk";margin-bottom:18px}.skill h3{font:600 15px "Space Grotesk";margin-bottom:8px}.skill p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}
+.project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.project{padding:24px;min-height:275px;transition:transform .35s,border-color .35s,box-shadow .35s}.project-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:28px}.project-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:linear-gradient(135deg,#79f0ef25,#7c9cff25);color:var(--cyan);font:700 17px "Space Grotesk"}.tag{font-size:9px;color:#c2cce4;border:1px solid var(--line);border-radius:99px;padding:6px 9px}.project h3{font:600 19px "Space Grotesk";margin-bottom:10px}.project p{color:var(--muted);font-size:12px;line-height:1.8}.project-foot{display:flex;align-items:center;gap:8px;color:#7be7b7;font-size:10px;margin-top:18px}.project-foot i{width:6px;height:6px;background:#7be7b7;border-radius:50%}
+.timeline{max-width:820px;position:relative;margin-left:7px}.timeline:before{content:"";position:absolute;left:8px;top:8px;bottom:20px;width:1px;background:linear-gradient(var(--cyan),#c49aff44)}.step{position:relative;padding:0 0 34px 42px}.step:before{content:"";position:absolute;left:3px;top:4px;width:11px;height:11px;border-radius:50%;background:var(--cyan);box-shadow:0 0 0 5px #79f0ef17,0 0 20px var(--cyan)}.step small{font:700 9px "Space Grotesk";letter-spacing:1.8px;color:var(--cyan)}.step h3{font:600 19px "Space Grotesk";margin:8px 0}.step p{font-size:12px;line-height:1.8;color:var(--muted);margin:0}
+.contact-panel{padding:48px;background:radial-gradient(circle at 90% 5%,#c49aff20,transparent 38%),linear-gradient(135deg,#172442ed,#10172ced);display:flex;justify-content:space-between;gap:28px;align-items:center}.contact-panel h2{font:700 clamp(32px,4.5vw,48px)/1.08 "Space Grotesk";letter-spacing:-2px;margin-bottom:12px}.contact-panel p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.contact-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}.contact-link{display:inline-flex;align-items:center;gap:9px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:#ffffff08;color:#e4eafa;font-size:11px;transition:.25s}.contact-link:hover{transform:translateY(-3px);border-color:var(--cyan);background:#79f0ef10}.contact-link b{color:var(--cyan);font:700 13px "Space Grotesk"}
+footer{border-top:1px solid var(--line);padding:27px 0 35px;color:#8490aa;font-size:10px}.footer{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap}.footer strong{font:700 13px "Space Grotesk";color:#e8efff;letter-spacing:1px}
+.reveal{opacity:0;transform:translateY(48px) scale(.975);filter:blur(5px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1),filter .9s cubic-bezier(.16,1,.3,1);transition-delay:var(--delay,0ms)}.reveal.from-left{transform:translateX(-55px) scale(.98)}.reveal.from-right{transform:translateX(55px) scale(.98)}.reveal.pop{transform:translateY(25px) scale(.88)}.reveal.show{opacity:1;transform:translate(0) scale(1);filter:blur(0)}
+#backTop{position:fixed;right:22px;bottom:22px;z-index:900;width:44px;height:44px;border-radius:50%;border:1px solid #79f0ef55;background:#101a30dd;color:var(--cyan);font-size:18px;cursor:pointer;opacity:0;pointer-events:none;transform:translateY(12px);transition:.3s;backdrop-filter:blur(12px)}#backTop.visible{opacity:1;pointer-events:auto;transform:translateY(0)}#backTop:hover{transform:translateY(-4px)}
+@keyframes pulse{70%{box-shadow:0 0 0 8px #7bf0b800}}@keyframes blink{50%{opacity:0}}@keyframes gradientFlow{to{background-position:200% center}}@keyframes ambientShift{to{transform:translate(3%,-2%) scale(1.05)}}@keyframes haloPulse{50%{transform:scale(1.08);opacity:.7}}@keyframes ringSpin{to{rotate:360deg}}@keyframes profileFloat{50%{transform:translateY(-13px) rotate(2deg)}}@keyframes chipFloat{50%{translate:0 -12px}} 
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:10px}.hero{padding-top:130px}.hero-art{height:460px}.about-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:repeat(2,1fr)}.contact-panel{display:block}.contact-panel>.btn{margin-top:24px}}
+@media(max-width:650px){.wrap{width:calc(100% - 30px)}.nav{height:68px}.menu{display:block}.navlinks{display:none;position:absolute;top:68px;left:15px;right:15px;padding:17px;background:#0d1428f5;border:1px solid var(--line);border-radius:16px;backdrop-filter:blur(20px);flex-direction:column;align-items:stretch;gap:7px}.navlinks.open{display:flex}.navlinks a{padding:11px}.navlinks a:after{display:none}.nav>.pill{display:none}section{padding:82px 0}.hero{padding:116px 0 50px;min-height:auto}.hero-grid{gap:0}h1{font-size:55px;letter-spacing:-3.5px}.hero-copy{font-size:14px}.hero-art{height:365px}.profile-shell{width:190px;height:190px}.ring{width:310px;height:310px}.ring.r2{width:260px;height:260px}.ring.r3{width:350px;height:350px}.float-chip{padding:9px 11px;font-size:9px}.chip-a{left:-2%;top:10%}.chip-b{right:-2%;top:30%}.chip-c{left:0;bottom:9%}.section-head h2{font-size:39px}.skill-grid{gap:10px}.skill{padding:17px;min-height:158px}.project-grid{grid-template-columns:1fr}.project{min-height:0}.fact-grid{gap:8px}.fact{padding:12px}.contact-panel{padding:28px 21px}.contact-link{flex:1 1 44%;justify-content:center}.footer{display:block}.footer span{display:block;margin-top:9px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none;filter:none}}
+</style>
+</head>
+<body>
+<canvas id="ambient" aria-hidden="true"></canvas>
+<div class="progress-track"><div class="progress" id="progress"></div></div>
+<header id="header"><div class="wrap nav">
+<a class="brand" href="#home">HAMZA<em>.</em></a>
+<nav class="navlinks" id="navlinks" aria-label="Main navigation">
+<a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#journey">Journey</a><a href="#contact">Contact</a>
+</nav>
+<a class="pill" href="#contact">Let's connect <span>↗</span></a>
+<button class="menu" id="menu" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+<div class="hero-content">
+<div class="eyebrow"><i class="live-dot"></i> OPEN TO LEARNING & OPPORTUNITIES</div>
+<h1>Ideas into<br><span class="gradient">possibilities.</span></h1>
+<div class="typed-line"><span id="typed"></span><i class="caret"></i></div>
+<p class="hero-copy">I'm Hamza Hakam, an Artificial Intelligence student with a growing passion for technology, software development, and solving meaningful problems. I learn by building, stay curious, and keep moving forward.</p>
+<div class="hero-actions"><a class="btn" href="#projects">Explore my work <span class="arrow">↗</span></a><a class="btn ghost" href="Hamza-Hakam-CV.pdf" target="_blank" rel="noopener">View my CV <span class="arrow">↗</span></a></div>
+<div class="quick-facts"><span>✦ <b>BS Artificial Intelligence</b></span><span>⌖ <b>Lahore, Pakistan</b></span></div>
+</div>
+<div class="hero-art reveal pop"><div class="halo"></div><div class="ring"></div><div class="ring r2"></div><div class="ring r3"></div>
+<div class="profile-shell"><div class="profile-inner"><div class="profile-fallback">HH</div><img src="profile.jpeg" alt="Hamza Hakam" onerror="this.style.opacity='0'"></div></div>
+<div class="float-chip chip-a"><b>MY INTEREST</b>Artificial Intelligence</div><div class="float-chip chip-b"><b>MY APPROACH</b>Learn · Build · Improve</div><div class="float-chip chip-c"><b>MY NEXT STEP</b>Real-world experience</div><div class="orbit-dot"></div>
+</div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="section-head reveal"><div class="kicker">01 — ABOUT ME</div><h2>A curious mind with a<br><span class="gradient">builder's mindset.</span></h2><p>I believe progress comes from curiosity, consistency, and the courage to keep learning. Here's a little about who I am and what I'm working toward.</p></div>
+<div class="about-grid">
+<article class="glass about-card reveal from-left"><h3>My story</h3><p>I'm Hamza Hakam, a BS Artificial Intelligence student at Superior University, Lahore. I'm focused on strengthening my programming foundations, exploring AI concepts, and turning classroom learning into practical work.</p><p>I'm looking forward to learning from experienced people, contributing with a positive attitude, and growing through internships, collaboration, and meaningful projects.</p></article>
+<article class="glass about-card reveal from-right"><h3>Quick introduction</h3><div class="fact-grid">
+<div class="fact"><small>Name</small><strong>Hamza Hakam</strong></div><div class="fact"><small>Education</small><strong>BS Artificial Intelligence</strong></div>
+<div class="fact"><small>University</small><strong>Superior University</strong></div><div class="fact"><small>Location</small><strong>Lahore, Pakistan</strong></div>
+<div class="fact"><small>Interests</small><strong>AI · Python · Development</strong></div><div class="fact"><small>Mindset</small><strong>Curious & consistent</strong></div>
+</div></article>
+</div></div></section>
+
+<section id="skills"><div class="wrap"><div class="section-head reveal"><div class="kicker">02 — SKILLS & INTERESTS</div><h2>Building my technical<br><span class="gradient">toolkit, step by step.</span></h2><p>These are my current learning areas. I keep developing them through university coursework, hands-on practice, and personal projects.</p></div>
+<div class="skill-grid">
+<article class="glass skill reveal"><div class="skill-icon">Py</div><h3>Python</h3><p>Programming fundamentals, logical thinking, and beginner projects.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">C++</div><h3>C++</h3><p>Core programming concepts and object-oriented programming basics.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">HTML</div><h3>HTML & CSS</h3><p>Responsive layouts, visual structure, and modern web styling.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">JS</div><h3>JavaScript</h3><p>Learning interactive interfaces and front-end fundamentals.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">AI</div><h3>Artificial Intelligence</h3><p>Academic foundations and exploring practical AI applications.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">ML</div><h3>Machine Learning</h3><p>Developing an understanding of data, models, and ML concepts.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">Git</div><h3>Git & GitHub</h3><p>Version control, repositories, and presenting development work.</p></article>
+<article class="glass skill reveal"><div class="skill-icon">✧</div><h3>AI Productivity Tools</h3><p>Using AI tools thoughtfully for learning, productivity, and ideas.</p></article>
+</div></div></section>
+
+<section id="projects"><div class="wrap"><div class="section-head reveal"><div class="kicker">03 — PROJECTS</div><h2>Small steps. Real<br><span class="gradient">hands-on learning.</span></h2><p>A snapshot of the work I'm exploring. As I publish projects, I'll add direct links and detailed case studies here.</p></div>
+<div class="project-grid">
+<article class="glass project reveal"><div class="project-top"><div class="project-icon">⌘</div><span class="tag">Web Development</span></div><h3>Personal Portfolio</h3><p>A responsive portfolio designed to present my background, learning journey, skills, and ways to connect.</p><div class="project-foot"><i></i> Personal web project</div></article>
+<article class="glass project reveal"><div class="project-top"><div class="project-icon">AI</div><span class="tag">AI Concepts</span></div><h3>AI Learning Exercises</h3><p>Academic exercises exploring logic, problem-solving, and the foundations behind intelligent systems.</p><div class="project-foot"><i></i> Academic learning</div></article>
+<article class="glass project reveal"><div class="project-top"><div class="project-icon">Py</div><span class="tag">Python & OOP</span></div><h3>Python Practice</h3><p>Beginner-friendly programs and object-oriented exercises created to strengthen my coding fundamentals.</p><div class="project-foot"><i></i> Continuous practice</div></article>
+</div></div></section>
+
+<section id="journey"><div class="wrap"><div class="section-head reveal"><div class="kicker">04 — MY JOURNEY</div><h2>Not there yet.<br><span class="gradient">On my way.</span></h2><p>I'm early in my journey, and that's what makes every new concept, challenge, and project worth exploring.</p></div>
+<div class="timeline">
+<div class="step reveal"><small>EDUCATION</small><h3>BS Artificial Intelligence</h3><p>Studying Artificial Intelligence at Superior University, Lahore, and building a foundation in computing and AI.</p></div>
+<div class="step reveal"><small>SKILL DEVELOPMENT</small><h3>Programming & Development</h3><p>Practising Python, C++, web development, and object-oriented programming through coursework and hands-on exercises.</p></div>
+<div class="step reveal"><small>NEXT MILESTONE</small><h3>Internship & Practical Experience</h3><p>Looking for opportunities to learn from a professional team, contribute responsibly, and grow as a developer.</p></div>
+</div></div></section>
+
+<section id="contact"><div class="wrap"><div class="glass contact-panel reveal pop">
+<div><div class="kicker">05 — LET'S CONNECT</div><h2>Good things start<br>with a <span class="gradient">conversation.</span></h2><p>Interested in an internship, collaboration, or a learning opportunity? I'd be glad to connect.</p>
+<div class="contact-actions">
+<a class="contact-link" href="mailto:hamzabhullar4234426@gmail.com"><b>✉</b> Email</a>
+<a class="contact-link" href="https://wa.me/923224234426" target="_blank" rel="noopener"><b>◉</b> WhatsApp</a>
+<a class="contact-link" href="https://www.linkedin.com/in/hamza-bhullar1/" target="_blank" rel="noopener"><b>in</b> LinkedIn</a>
+<a class="contact-link" href="https://github.com/HamzaHakamAI" target="_blank" rel="noopener"><b>⌘</b> GitHub</a>
+</div></div><a class="btn" href="mailto:hamzabhullar4234426@gmail.com">Send an email <span class="arrow">↗</span></a>
+</div></div></section>
+</main>
+<footer><div class="wrap footer"><strong>HAMZA HAKAM</strong><span>Designed with curiosity · Built for growth · © <span id="year"></span></span></div></footer>
+<button id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+<script>
+const $=s=>document.querySelector(s);
+const header=$('#header'),progress=$('#progress'),nav=$('#navlinks'),menu=$('#menu'),backTop=$('#backTop');
+function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max?scrollY/max*100:0)+'%';header.classList.toggle('scrolled',scrollY>25);backTop.classList.toggle('visible',scrollY>550)}
+addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+backTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
+$('#year').textContent=new Date().getFullYear();
+
+// Reveal sections progressively, with a small stagger for cards.
+const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');revealObserver.unobserve(entry.target)}}),{threshold:.14,rootMargin:'0px 0px -45px 0px'});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.setProperty('--delay',(i%4)*100+'ms');revealObserver.observe(el)});
+
+// Highlight the section currently in view.
+const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)nav.querySelectorAll('a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='#'+entry.target.id))}),{rootMargin:'-38% 0px -52% 0px'});
+document.querySelectorAll('main section[id]').forEach(s=>sectionObserver.observe(s));
+
+// Subtle typewriter introduction.
+const phrases=['AI Student','Aspiring Developer','Curious Problem Solver','Always Learning'];
+const typed=$('#typed');let phrase=0,char=0,deleting=false;
+function typeLoop(){const word=phrases[phrase];typed.textContent=word.slice(0,char);if(!deleting&&char<word.length){char++;setTimeout(typeLoop,85)}else if(!deleting){deleting=true;setTimeout(typeLoop,1300)}else if(char>0){char--;setTimeout(typeLoop,42)}else{deleting=false;phrase=(phrase+1)%phrases.length;setTimeout(typeLoop,280)}}
+typeLoop();
+
+// Pointer-following glow on glass cards.
+document.querySelectorAll('.glass').forEach(card=>card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect();card.style.setProperty('--mx',(e.clientX-r.left)+'px');card.style.setProperty('--my',(e.clientY-r.top)+'px')}));
+
+// Lightweight ambient particles; automatically reduced for small screens/reduced-motion.
+const canvas=$('#ambient'),ctx=canvas.getContext('2d'),reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
+let dots=[],w=0,h=0,dpr=1;
+function resize(){dpr=Math.min(devicePixelRatio||1,1.5);w=innerWidth;h=innerHeight;canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);const count=w<650?24:48;dots=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,vx:(Math.random()-.5)*.22,vy:(Math.random()-.5)*.22,r:Math.random()*1.5+.4}))}
+function draw(){ctx.clearRect(0,0,w,h);for(let i=0;i<dots.length;i++){const p=dots[i];p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>w)p.vx*=-1;if(p.y<0||p.y>h)p.vy*=-1;ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fillStyle='rgba(145,205,255,.48)';ctx.fill();for(let j=i+1;j<dots.length;j++){const q=dots[j],dx=p.x-q.x,dy=p.y-q.y,dist=Math.hypot(dx,dy);if(dist<115){ctx.beginPath();ctx.moveTo(p.x,p.y);ctx.lineTo(q.x,q.y);ctx.strokeStyle=`rgba(115,180,255,${(1-dist/115)*.09})`;ctx.lineWidth=.7;ctx.stroke()}}}if(!reduced)requestAnimationFrame(draw)}
+resize();if(!reduced)draw();addEventListener('resize',resize);
+</script>
+</body></html>
